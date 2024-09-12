@@ -1,0 +1,17 @@
+input:
+  generate:
+    count: 1
+    mapping: |
+      root = """foo|bar|baz
+      a|b|c
+      """
+
+output:
+  sftp:
+    address: localhost:2200
+    path: /products/products-20240101.csv
+    credentials:
+      username: foo
+      password: pass
+    max_in_flight: 1
+

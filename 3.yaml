@@ -1,0 +1,16 @@
+input:
+  sftp:
+    address: "0.0.0.0:2200"
+    credentials:
+      username: "foo"
+      password: "pass"
+    paths:
+      - /products/products-20240101.csv
+    scanner:
+      csv:
+        custom_delimiter: "|"
+        parse_header_row: true
+        continue_on_error: false
+
+output:
+  stdout: {}
